@@ -14782,7 +14782,7 @@ blockquote .author {
   position: relative;
 }
 .login_form .form-group .small_text {
-  color: var(--black_800);
+  color: black;
   margin-bottom: 5px;
 }
 .login_form .form-group .form-control {

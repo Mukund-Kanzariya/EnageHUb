@@ -2,72 +2,33 @@
 require "../includes/config.php";
 require pathOf('/includes/navbar.php');
 ?>
-
 <!--================Forum Breadcrumb Area =================-->
 <section class="doc_banner_area search-banner-light">
-    <div class="container-fluid pl-60 pr-60">
+    <div class="container">
         <div class="doc_banner_content">
             <form action="#" class="header_search_form">
                 <div class="header_search_form_info">
                     <div class="form-group">
                         <div class="input-wrapper">
-                            <i class="icon_search"></i>
-                            <input type='search' id="searchbox" autocomplete="off" name="search" placeholder="Search for Topics...." />
-                            <div class="header_search_form_panel">
-                                <ul class="list-unstyled">
-                                    <li>Help Desk
-                                        <ul class="list-unstyled search_item">
-                                            <li><span>Configuration</span><a href="#">How to edit host and
-                                                    port?</a></li>
-                                            <li><span>Configuration</span><a href="#">The dev Property</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>Support
-                                        <ul class="list-unstyled search_item">
-                                            <li><span>Pages</span><a href="#">The asyncData Method</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>Documentation
-                                        <ul class="list-unstyled search_item">
-                                            <li><span>Getting Started</span><a href="#">The asyncData Method</a>
-                                            </li>
-                                            <li><span>Getting Started</span><a href="#">The asyncData Method</a>
-                                            </li>
-                                            <li><span>Getting Started</span><a href="#">The asyncData Method</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
+                            <h1>Discuss Forum</h1>
                         </div>
                     </div>
-                </div>
-                <div class="header_search_keyword">
-                    <span class="header-search-form__keywords-label">Popular topics:</span>
-                    <ul class="list-unstyled">
-                        <li class="wow fadeInUp" data-wow-delay="0.2s"><a href="#">Helpdesk,</a></li>
-                        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="#">Introduction,</a></li>
-                        <li class="wow fadeInUp" data-wow-delay="0.4s"><a href="#">Payment</a></li>
-                    </ul>
                 </div>
             </form>
         </div>
     </div>
 </section>
+
 <section class="page_breadcrumb">
-    <div class="container-fluid pl-60 pr-60">
+    <div class="container custom_container">
         <div class="row">
             <div class="col-sm-7">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Docs</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Docy WordPress Theme</li>
+                        <li class="breadcrumb-item"><a href="<?= urlOf('') ?>">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Discuss Forum</li>
                     </ol>
                 </nav>
-            </div>
-            <div class="col-sm-5">
-                <a href="#" class="date"><i class="icon_clock_alt"></i>Updated on March 03, 2020</a>
             </div>
         </div>
     </div>

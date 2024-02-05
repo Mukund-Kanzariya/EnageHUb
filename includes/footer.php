@@ -5,8 +5,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="f_widget doc_about_widget wow fadeInUp" data-wow-delay="0.2s">
                         <a href="#">
-                            <img src="img/logo.png" class="logo-light" srcset="img/logo-2x.png 2x" alt="">
-                            <img src="img/logo-w.png" class="logo-dark" srcset="img/logo-2x.png 2x" alt="">
+                            <img src="<?= urlOf('img/logo.png') ?>" class="logo-light" srcset="img/logo-2x.png 2x" alt="">
+                            <img src="<?= urlOf('img/logo-w.png') ?>" class="logo-dark" srcset="img/logo-2x.png 2x" alt="">
                         </a>
                         <p>I’m available for commissions and collaborations, and i’m excited to hear from you
                             about
@@ -23,10 +23,10 @@
                     <div class="f_widget doc_service_list_widget pl-30 wow fadeInUp" data-wow-delay="0.3s">
                         <h3 class="f_title_two">Solutions</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#"><img src="img/new/smile2.png" alt="">Help Docs</a></li>
-                            <li><a href="#"><img src="img/new/doc2.png" alt="">Docbuzz</a></li>
-                            <li><a href="#"><img src="img/new/house2.png" alt="">User Frontend</a></li>
-                            <li><a href="#"><img src="img/new/bag2.png" alt="">Lightbox</a></li>
+                            <li><a href="#"><img src="<?= urlOf('img/new/smile2.png') ?>" alt="">Help Docs</a></li>
+                            <li><a href="#"><img src="<?= urlOf('img/new/doc2.png') ?>" alt="">Docbuzz</a></li>
+                            <li><a href="#"><img src="<?= urlOf('img/new/house2.png') ?>" alt="">User Frontend</a></li>
+                            <li><a href="#"><img src="<?= urlOf('img/new/bag2.png') ?>" alt="">Lightbox</a></li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,6 @@
                             <li><a href="#">Affiliates</a></li>
                             <li><a href="#">Partners</a></li>
                             <li><a href="#">Careers</a></li>
-
                         </ul>
                     </div>
                 </div>
@@ -64,10 +63,9 @@
             <ul class="doc_footer_menu list-unstyled wow fadeInUp" data-wow-delay="0.2s">
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Latest Projects</a></li>
-
             </ul>
-            <p class="wow fadeInUp" data-wow-delay="0.3s">© 2023 All Rights Reserved Design by
-                <span>Spider-themes</span>
+            <p class="wow fadeInUp" data-wow-delay="0.3s">© 2024 All Rights Reserved Design by
+                <span>EngageHub</span>
             </p>
         </div>
     </div>

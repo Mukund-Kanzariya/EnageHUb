@@ -3,13 +3,38 @@ require "../includes/config.php";
 require pathOf('/includes/navbar.php');
 ?>
 
-<div class="breadcrumb_area_three">
+<!--================Forum Breadcrumb Area =================-->
+<section class="doc_banner_area search-banner-light">
   <div class="container">
-    <div class="breadcrumb_text">
-      <h2>Contact Us</h2>
+    <div class="doc_banner_content">
+      <form action="#" class="header_search_form">
+        <div class="header_search_form_info">
+          <div class="form-group">
+            <div class="input-wrapper">
+              <h1>Contact Us</h1>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
-</div>
+</section>
+
+<section class="page_breadcrumb">
+  <div class="container custom_container">
+    <div class="row">
+      <div class="col-sm-7">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?= urlOf('') ?>">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================End Forum Breadcrumb Area =================-->
 
 <section class="contact_area sec_pad">
   <div class="container">

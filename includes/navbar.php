@@ -26,8 +26,9 @@
             <div class="round_spinner">
                 <div class="spinner"></div>
                 <div class="text">
-                    <img src="img/spinner_logo.png" alt="">
-                    <h4><span>Doc</span>y</h4>
+                    <img src="<?= urlOf('img/spinner_logo.png') ?>" alt="">
+                    <br><br>
+                    <h4><span>Engage</span>Hub</h4>
                 </div>
             </div>
             <h2 class="head">Did You Know?</h2>
@@ -38,8 +39,8 @@
         <nav class="navbar navbar-expand-lg menu_one menu_purple sticky-nav">
             <div class="container">
                 <a class="navbar-brand header_logo" href="index-2.html">
-                    <img class="first_logo sticky_logo" src="img/logo.png" srcset="img/logo-2x.png 2x" alt="logo">
-                    <img class="white_logo main_logo" src="img/logo-w.png" srcset="img/logo-w2x.png 2x" alt="logo">
+                    <img class="first_logo sticky_logo" src="<?= urlOf('img/logo.png') ?>" srcset="img/logo-2x.png 2x" alt="logo">
+                    <img class="white_logo main_logo" src="<?= urlOf('img/logo-w.png') ?>" srcset="img/logo-w2x.png 2x" alt="logo">
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="menu_toggle">
@@ -60,7 +61,7 @@
                             <a href="<?= urlOf('') ?>" class="nav-link dropdown-toggle">Home</a>
                         </li>
                         <li class="nav-item dropdown submenu">
-                            <a href="index-2.html" class="nav-link dropdown-toggle">Community Hall</a>
+                            <a href="<?= urlOf('pages/communityHall.php') ?>" class="nav-link dropdown-toggle">Community Hall</a>
                         </li>
                         <li class="nav-item dropdown submenu">
                             <a href="<?= urlOf('pages/discussForum.php') ?>" class="nav-link dropdown-toggle">Discuss Forums</a>
@@ -69,11 +70,11 @@
                             <a href="<?= urlOf('pages/contact.php') ?>" class="nav-link dropdown-toggle">Contact</a>
                         </li>
                         <li class="nav-item dropdown submenu">
-                            <a href="index-2.html" class="nav-link dropdown-toggle">Profile</a>
+                            <a href="<?= urlOf('pages/profile.php') ?>" class="nav-link dropdown-toggle">Profile</a>
                         </li>
                     </ul>
                     <div class="right-nav">
-                        <a class="nav_btn" href="#">Login</a>
+                        <a class="nav_btn" href="<?= urlOf('pages/signIn.php') ?>">Sign In</a>
                         <div class="px-2 js-darkmode-btn" title="Toggle dark mode">
                             <label for="something" class="tab-btn tab-btns">
                                 <ion-icon name="moon"></ion-icon>
