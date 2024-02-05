@@ -54,7 +54,6 @@
                         </span>
                     </span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav menu ml-auto">
                         <li class="nav-item dropdown submenu">
