@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Kolkata');
 // $password = "";
 // $dbname = "engagehubdb";
 
-// $conn = mysqli_connect($host, $username, $password, $dbname);
+// $connection = mysqli_connect("localhost", "root", "", "engagehub");
 
 define("BASE_DIR", $_SERVER['DOCUMENT_ROOT'] . "/EngageHub");
 define("BASE_URL", "/EngageHub");

@@ -8,15 +8,15 @@ require "../includes/config.php";
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?=  urlOf('assets/img/favicon.ico')?>" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= urlOf('assets/bootstrap/css/bootstrap.min.css') ?>">
     <!-- icon css-->
     <link rel="stylesheet" href="<?= urlOf('assets/elagent-icon/style.css') ?>">
     <link rel="stylesheet" href="<?= urlOf('assets/animation/animate.css') ?>">
-    <link rel="stylesheet" href="<?= urlOf('css/style-main.css') ?>">
-    <link rel="stylesheet" href="<?= urlOf('css/responsive.css') ?>">
-    <title>Docy</title>
+    <link rel="stylesheet" href="<?= urlOf('assets/css/style-main.css') ?>">
+    <link rel="stylesheet" href="<?= urlOf('assets/css/responsive.css') ?>">
+    <title>Sign-Up | Engage Hub</title>
 </head>
 
 <body data-scroll-animation="true">
@@ -25,7 +25,7 @@ require "../includes/config.php";
             <div class="round_spinner">
                 <div class="spinner"></div>
                 <div class="text">
-                    <img src="<?= urlOf('img/spinner_logo.png') ?>" alt="">
+                    <img src="<?= urlOf('assets/img/spinner_logo.png') ?>" alt="">
                     <br><br>
                     <h4><span>Engage</span>Hub</h4>
                 </div>
@@ -39,40 +39,53 @@ require "../includes/config.php";
             <div class="row ml-0 mr-0">
                 <div class="sign_left signup_left">
                     <h2>We are design changers do what matters.</h2>
-                    <img class="position-absolute top" src="<?= urlOf('img/signup/top_ornamate.png') ?>" alt="top">
-                    <img class="position-absolute bottom" src="<?= urlOf('img/signup/bottom_ornamate.png') ?>" alt="bottom">
-                    <img class="position-absolute middle wow fadeInRight" src="<?= urlOf('img/signup/man_image.png') ?>" alt="bottom">
+                    <img class="position-absolute top" src="<?= urlOf('assets/img/signup/top_ornamate.png') ?>" alt="top">
+                    <img class="position-absolute bottom" src="<?= urlOf('assets/img/signup/bottom_ornamate.png') ?>" alt="bottom">
+                    <img class="position-absolute middle wow fadeInRight" src="<?= urlOf('assets/img/signup/man_image.png') ?>" alt="bottom">
                     <div class="round wow zoomIn" data-wow-delay="0.2s"></div>
                 </div>
                 <div class="sign_right signup_right">
                     <div class="sign_inner signup_inner">
                         <div class="text-center">
-                            <h3 style="color: black;">Create your Docy Account</h3>
+                        <img style="height: 24%; width:24%;" src="<?= urlOf('assets/img/logo5.png') ?>" alt="logo">
+                            <h3 style="color: black;">Create your Account</h3>
                             <p style="color: black;">Already have an account? <a style="color: black;" href="<?= urlOf('pages/signIn.php') ?>">Sign in</a></p>
                         </div>
-                        <form action="#" class="row login_form">
+                        
+                        <form class="row login_form" enctype="multipart/form-data">
                             <div class="col-sm-6 form-group">
-                                <div class="small_text">First name</div>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Muhammad">
+                                <div class="small_text">Name</div>
+                                <input type="text" class="form-control text-dark" name="name" id="name" autofocus placeholder="Enter Your Name Here" Required>
                             </div>
                             <div class="col-sm-6 form-group">
-                                <div class="small_text">Last name</div>
-                                <input type="text" class="form-control" name="lname" id="lname" placeholder="Jewel">
+                                <div class="small_text">Age</div>
+                                <input type="text" class="form-control text-dark" name="age" id="age" Required>
                             </div>
                             <div class="col-lg-12 form-group">
                                 <div class="small_text">Your email</div>
-                                <input type="email" class="form-control" id="email" placeholder="info@Docy.com">
+                                <input type="email" name="email" class="form-control text-dark" id="email" placeholder="info@engagehub.com" Required>
                             </div>
                             <div class="col-lg-12 form-group">
                                 <div class="small_text">Password</div>
-                                <input id="signup-password" name="signup-password" type="password" class="form-control" placeholder="5+ characters required" autocomplete="off">
+                                <input id="password" name="password" type="password" class="form-control text-dark" placeholder="Enter Your Password" autocomplete="off" Required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <div class="small_text">Gender</div>
+                                <select class="form-control text-dark" id="gender">
+                                    <option id="male">Male</option>
+                                    <option id="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <div class="small_text">Country</div>
+                                <input id="location" name="country" type="text" class="form-control text-dark" placeholder="Enter Country's Name" autocomplete="off" Required>
                             </div>
                             <div class="col-lg-12 form-group">
-                                <div class="small_text">Confirm password</div>
-                                <input id="confirm-password" name="confirm-password" type="password" class="form-control" placeholder="5+ characters required" autocomplete="off">
+                                <div class="small_text">Profile Photo</div>
+                                <input id="image" type="file" class="form-control text-dark" Required>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <button type="submit" class="btn action_btn thm_btn">Create an account</button>
+                                <button type="button" class="btn action_btn thm_btn" onclick="createAccount()">Create an account</button>
                             </div>
                         </form>
                     </div>
@@ -81,22 +94,55 @@ require "../includes/config.php";
         </section>
     </div>
 
+<script>
+
+    function createAccount(){
+        var fileInput = document.getElementById('image');
+        var file = fileInput.files[0];
+
+        var formData= new FormData();
+        formData.append('file', file);
+        formData.append('name', $("#name").val());
+        formData.append('gender', $("#gender").val());
+        formData.append('email', $("#email").val());
+        formData.append('password', $("#password").val());
+        formData.append('age', $("#age").val());
+        formData.append('country', $("#location").val());
+
+        $.ajax({
+            url: "../api/insertusers.php",
+            method: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response){
+                console.log(response);
+                window.location = '../index.php';
+            }
+        })
+    }
+
+
+
+</script>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?= urlOf('js/jquery-3.5.1.min.js') ?>"></script>
-    <script src="<?= urlOf('js/pre-loader.js') ?>"> </script>
+    <script src="<?= urlOf('assets/js/jquery-3.5.1.min.js') ?>"></script>
+    <script src="<?= urlOf('assets/js/pre-loader.js') ?>"> </script>
     <script src="<?= urlOf('assets/bootstrap/js/popper.min.js') ?>"></script>
     <script src="<?= urlOf('assets/bootstrap/js/bootstrap.min.js') ?>"></script>
-    <script src="<?= urlOf('js/parallaxie.js') ?>"></script>
-    <script src="<?= urlOf('js/TweenMax.min.js') ?>"></script>
+    <script src="<?= urlOf('assets/js/parallaxie.js') ?>"></script>
+    <script src="<?= urlOf('assets/js/TweenMax.min.js') ?>"></script>
     <script src="<?= urlOf('assets/wow/wow.min.js') ?>"></script>
     <script src="<?= urlOf('../../unpkg.com/ionicons%405.4.0/dist/ionicons.js') ?>"></script>
-    <script src="<?= urlOf('js/main.js') ?>"></script>
+    <script src="<?= urlOf('assets/js/main.js') ?>"></script>
 
 </body>
 
 
-<!-- Mirrored from html-template.spider-themes.net/docy/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Feb 2024 10:41:26 GMT -->
+
 
 </html>
